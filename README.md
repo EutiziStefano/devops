@@ -1,5 +1,3 @@
-# NTT Data - Data Intelligence
-
 ## DevOps Engineer test
 In the following test you will find four main subjects:
 - **Public Cloud**: GCP
