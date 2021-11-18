@@ -1,0 +1,1 @@
+1. the application is running and doesn't have service or ingress
