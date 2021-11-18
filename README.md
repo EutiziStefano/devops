@@ -35,8 +35,8 @@ _NOTES_
 ```
 PROJECT_ID=$(gcloud config get-value project)
 gcloud services enable container.googleapis.com
-gcloud container clusters create di-nttdata --machine-type=n1-standard-2 --num-nodes=3 --zone=europe-west3-b --project=$PROJECT_ID
-gcloud container clusters get-credentials di-nttdata --zone=europe-west3-b --project=$PROJECT_ID
+gcloud container clusters create SUB --machine-type=n1-standard-2 --num-nodes=3 --zone=europe-west3-b --project=$PROJECT_ID
+gcloud container clusters get-credentials SUB --zone=europe-west3-b --project=$PROJECT_ID
 ```
 
 ### Create Jenkins instance
@@ -57,7 +57,7 @@ gcloud beta compute ssh --zone "europe-west3-b" "jenkins" --project=$PROJECT_ID
 
 ### Remove all resources
 ```
-gcloud container clusters delete di-nttdata --zone=europe-west3-b --project=$PROJECT_ID
+gcloud container clusters delete SUB --zone=europe-west3-b --project=$PROJECT_ID
 gcloud beta compute instances delete jenkins --zone=europe-west3-b --project=$PROJECT_ID
 gcloud compute firewall-rules delete fw-jenkins-http --project=$PROJECT_ID
 ```
